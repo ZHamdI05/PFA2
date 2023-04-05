@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Project</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body>
+	  
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+
+<div class="row">
+		
+	<!-- BEGIN SEARCH RESULT -->
+  <div class="col-md-12">
+    <div class="grid search">
+      <div class="grid-body">
+		<div class="startYOP">
+			<h1>Start your own project</h1>
+			<div class="account-type">
+				<a routerLink="form"><button class="btn btn-primary">Create a Project</button></a>
+			</div>
+		</div>
+		<h1>Check other projects:</h1>
+        <div class="row">
+          <!-- BEGIN FILTERS -->
+          <div class="col-md-3">
+            <h2 class="grid-title"><i class="fa fa-filter"></i> Filters</h2>
+            <hr>
+			<h4>By status</h4>
+            <div class="checkbox">
+              <label><input type="radio"  name="status" class="icheck" value="completed"> Completed</label>
+            </div>
+			<div class="checkbox">
+				<label><input type="radio" name="status" class="icheck" value="in progress"> In progress</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="radio" name="status" class="icheck" value="on hold"> On hold</label>
+			  </div>
+            <div class="padding"></div>
+            <h4>By budget:</h4>
+			From
+            <div class="input-group date form_date" >
+              <input [(ngModel)]="twoWayBindingPriceFrom" type="text" class="form-control">
+              <span class="input-group-addon bg-blue"></span>
+            </div>
+            <input type="hidden" id="dtp_input1" value="">
+            
+            To
+            <div class="input-group date form_date" >
+              <input [(ngModel)]="twoWayBindingPriceTo" type="text" class="form-control">
+              <span class="input-group-addon bg-blue"></span>
+            </div>
+            <input type="hidden" id="dtp_input2" value="">
+            
+            Between <div id="price1">{{twoWayBindingPriceFrom}}TND</div> to <div id="price2">{{twoWayBindingPriceTo}}TND</div>
+          </div>
+          <!-- END FILTERS -->
+          <!-- BEGIN RESULT -->
+          <div class="col-md-9">
+            <h2><i class="fa fa-file-o"></i> Result</h2>
+            <hr>
+            <!-- BEGIN SEARCH INPUT -->
+            <div class="input-group">
+              <input #searchInput type="text" class="form-control" placeholder="Search by project name">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" (click)="search(searchInput.value)" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+            <!-- END SEARCH INPUT -->
+            <p>Showing results matching "{{searchPrompt}}"</p>
+            
+            <div class="padding"></div>
+            
+            <!-- BEGIN TABLE RESULT -->
+            <div class="table-responsive">
+              <table class="table table-hover">
+				<thead>
+					<tr>
+					  <th>ID</th>
+					  <th>Name</th>
+					  <!-- <th>Rating</th> -->
+					  <th>Budget</th>
+					  <th>Status</th>
+					</tr>
+				  </thead>
+                <tbody >
+					<tr *ngFor="let project of projects" (click)="showProjectDetails(project.ProjectId)">
+                  <td class="number text-center">{{project.ProjectId}}</td>
+                  <!-- <td class="image"><img src="https://www.bootdey.com/image/400x300/FF8C00" alt=""></td> -->
+                  <td class="product"><strong>{{project.ProjectName}}</strong><br>Description: {{project.Description}}</td>
+                  <!-- <td class="rate text-right">
+					<span>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+					</span>
+				  </td> -->
+                  <td class="price text-right">{{project.Budget}}TND</td>
+				  <td class="price text-right">{{project.Status}}</td>
+				  <td>
+				  
+				</td>
+                </tr>
+                <!-- <tr>
+                  <td class="number text-center">2</td>
+                  <td class="image"><img src="https://www.bootdey.com/image/400x300/5F9EA0" alt=""></td>
+                  <td class="product"><strong>Product 2</strong><br>This is the product description.</td>
+                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
+                  <td class="price text-right">$1,050</td>
+				  <td class="price text-right">In progress</td>
+                </tr> -->
+                
+              </tbody></table>
+            </div>
+            <!-- END TABLE RESULT -->
+            
+
+          </div>
+          <!-- END RESULT -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SEARCH RESULT -->
+</div>
+</div>
+<app-project-details (click)="closeDetails()" style="display: none;position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" id="projectDetails"></app-project-details>
+</body>
+</html>

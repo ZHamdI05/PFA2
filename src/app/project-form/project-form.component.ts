@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-project-form',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-form.component.css']
 })
 export class ProjectFormComponent {
+  constructor(_dataService:DataService){
 
+  }
+  submitProject(name:string,budget:string){
+
+  }
 }

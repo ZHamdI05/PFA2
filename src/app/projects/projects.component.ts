@@ -20,19 +20,19 @@ export class ProjectsComponent {
   
   ngOnInit(){
     // use when needed
-    this.projects=[
-      {
-        ProjectId:10,
-        ProjectName:'string',
-        Description:'desc',
-        Status:'on hold',
-        CreatedOn:'2024/01/01',
-        Budget:1000,
-        Region:'reg',
-        Industry:'ind',
-        Sector:'sect'
-      }
-    ]
+    // this.projects=[
+    //   {
+    //     ProjectId:10,
+    //     ProjectName:'string',
+    //     Description:'desc',
+    //     Status:'on hold',
+    //     CreatedOn:'2024/01/01',
+    //     Budget:1000,
+    //     Region:'reg',
+    //     Industry:'ind',
+    //     Sector:'sect'
+    //   }
+    // ]
   }
   search(prompt:string){
 

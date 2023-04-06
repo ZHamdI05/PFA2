@@ -20,19 +20,19 @@ export class ProjectsComponent {
   
   ngOnInit(){
     // use when needed
-    // this.projects=[
-    //   {
-    //     ProjectId:10,
-    //     ProjectName:'string',
-    //     Description:'desc',
-    //     Status:'on hold',
-    //     CreatedOn:'2024/01/01',
-    //     Budget:1000,
-    //     Region:'reg',
-    //     Industry:'ind',
-    //     Sector:'sect'
-    //   }
-    // ]
+    this.projects=[
+      {
+        ProjectId:10,
+        ProjectName:'string',
+        Description:'desc',
+        Status:'on hold',
+        CreatedOn:'2024/01/01',
+        Budget:1000,
+        Region:'reg',
+        Industry:'ind',
+        Sector:'sect'
+      }
+    ]
   }
   search(prompt:string){
 
@@ -47,6 +47,7 @@ export class ProjectsComponent {
   }
   showProjectDetails(id:string|number){
     const projectDetails=document.getElementById('projectDetails');
+    const close:any=document.getElementById('close');
     if(projectDetails){
       const project = this.projects.find((p:any) => p.ProjectId === id);
 
@@ -54,10 +55,13 @@ export class ProjectsComponent {
       
       this._dataService.emitEvent(project);
       projectDetails.style.display="block";
+      close.style.display="block";
     }
   }
   closeDetails(){
     const projectDetails=document.getElementById('projectDetails');
+    const close:any=document.getElementById('close');
     if(projectDetails){projectDetails.style.display="none";}
+    close.style.display="none";
   }
 }

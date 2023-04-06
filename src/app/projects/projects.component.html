@@ -127,6 +127,12 @@
   <!-- END SEARCH RESULT -->
 </div>
 </div>
-<app-project-details (click)="closeDetails()" style="display: none;position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" id="projectDetails"></app-project-details>
+<app-project-details  style="display: none;position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" id="projectDetails">
+  
+</app-project-details>
+<button type="button" id="close" (click)="closeDetails()" aria-label="Close" style="margin: 5px; padding: 5px 10px; display:none; position: fixed; top: 0px;right: 0px;">
+  <span aria-hidden="true">&times;</span>
+</button>
+
 </body>
 </html>

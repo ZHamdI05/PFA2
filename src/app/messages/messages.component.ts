@@ -21,6 +21,11 @@ export class MessagesComponent {
     // img.src = url;
     // add the <img> element to the DOM
     // document.body.appendChild(img);
-  }
+    
+
+    }
+    searchContact(name:string){
+
+    }
   
 }

@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
   public messageUrl='';
-  public projectUrl='http://192.168.1.109:7007/api/Search/';
+  public projectUrl='http://127.0.0.1:7007/api/Search/';
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }

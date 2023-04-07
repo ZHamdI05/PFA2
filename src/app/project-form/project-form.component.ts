@@ -10,7 +10,7 @@ export class ProjectFormComponent {
   constructor(_dataService:DataService){
 
   }
-  submitProject(name:string,budget:string){
-
+  submitProject(name:string,budget:string,industry:string,sector:string,description:string){
+    
   }
 }

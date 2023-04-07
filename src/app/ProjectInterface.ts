@@ -1,11 +1,11 @@
 export interface IProject{
-    ProjectId:number,
-    ProjectName:string,
-    Description:string,
-    Status:string,
-    CreatedOn:string,
-    Budget:number,
-    Region:string,
-    Industry:string,
-    Sector:string
+    projectId:number,
+    projectName:string,
+    description:string,
+    status:string,
+    createdOn:string,
+    budget:number,
+    region:string,
+    industry:string,
+    sector:string
 }

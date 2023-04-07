@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eWdS2yuSWzG12gWQPFhDgxyKDaAWHayXg/XEO14h/s6aqq8YI/LZZjMUmzRellVo6d9Q6lAYAVmjwYDWblwTZQ==",
+  "dgSpecHash": "XGTKwEDhs2y6JREYp9rfrEbotn2USB+JkZhLa/2ocmBIeLbUD6c4by8ha3+81RJRYZy8S3B9bpgqr+0szGcn1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

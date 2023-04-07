@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

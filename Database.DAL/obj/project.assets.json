@@ -3166,11 +3166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.DAL\\Database.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.DAL\\Database.DAL.csproj",
       "projectName": "Database.DAL",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.DAL\\Database.DAL.csproj",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.DAL\\Database.DAL.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.DAL\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3187,8 +3187,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\gitproject\\Database.BL\\Database.BL.csproj"
+            "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj": {
+              "projectPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj"
             }
           }
         }

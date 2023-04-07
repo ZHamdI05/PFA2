@@ -22,23 +22,24 @@ export class ProjectsComponent {
     // use when needed
     this.projects=[
       {
-        ProjectId:10,
-        ProjectName:'string',
-        Description:'desc',
-        Status:'on hold',
-        CreatedOn:'2024/01/01',
-        Budget:1000,
-        Region:'reg',
-        Industry:'ind',
-        Sector:'sect'
+        projectId:null,
+        projectName:null,
+        description:null,
+        status:null,
+        createdOn:null,
+        budget:null,
+        region:null,
+        industry:null,
+        sector:null
       }
     ]
   }
   search(prompt:string){
 
-    this._dataService.searchProject(prompt).subscribe(p => this.projects=p);
+    this._dataService.searchProject(prompt).subscribe((p:any) => this.projects=p);
     let statusRadio:HTMLInputElement|null = document.querySelector('input[name="status"]:checked');
     let statusValue = statusRadio ? statusRadio.value : null;
+    console.log(this.projects);
     // do filtering here
   }
   rate(projectId:string){
@@ -49,7 +50,7 @@ export class ProjectsComponent {
     const projectDetails=document.getElementById('projectDetails');
     const close:any=document.getElementById('close');
     if(projectDetails){
-      const project = this.projects.find((p:any) => p.ProjectId === id);
+      const project = this.projects.find((p:any) => p.projectId === id);
 
       this._dataService.setProjectData(project);
       

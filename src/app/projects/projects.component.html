@@ -85,10 +85,10 @@
 					</tr>
 				  </thead>
                 <tbody >
-					<tr *ngFor="let project of projects" (click)="showProjectDetails(project.ProjectId)">
-                  <td class="number text-center">{{project.ProjectId}}</td>
+					<tr *ngFor="let project of projects" (click)="showProjectDetails(project.projectId)">
+                  <td class="number text-center">{{project.projectId}}</td>
                   <!-- <td class="image"><img src="https://www.bootdey.com/image/400x300/FF8C00" alt=""></td> -->
-                  <td class="product"><strong>{{project.ProjectName}}</strong><br>Description: {{project.Description}}</td>
+                  <td class="product"><strong>{{project.projectName}}</strong><br>Description: {{project.description}}</td>
                   <!-- <td class="rate text-right">
 					<span>
 						<i class="fa fa-star-o"></i>
@@ -98,8 +98,8 @@
 						<i class="fa fa-star-o"></i>
 					</span>
 				  </td> -->
-                  <td class="price text-right">{{project.Budget}}TND</td>
-				  <td class="price text-right">{{project.Status}}</td>
+                  <td class="price text-right">{{project.budget}}TND</td>
+				  <td class="price text-right">{{project.status}}</td>
 				  <td>
 				  
 				</td>

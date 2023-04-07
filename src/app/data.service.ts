@@ -10,13 +10,16 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
   public messageUrl='';
-  public projectUrl='http://127.0.0.1:7007/api/Search/';
+  public projectUrl='https://localhost:7007/api/Search/';
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }
   searchProject(prompt:string){
     let promptParams = new HttpParams().set('prompt', prompt);
-    return this.http.get<IProject[]>(`${this.projectUrl}`+prompt);//,{params:promptParams}
+    const p:any=this.http.get(`${this.projectUrl}`+prompt);
+    console.log("check "+p);
+    return p;//,{params:promptParams}
+    
   }
   private projectData:any;
   setProjectData(data: any) {

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj": {}
+    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj": {
+    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\Database.BL.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\Nouveau dossier\\PFA2\\Database.BL\\obj\\",
+        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

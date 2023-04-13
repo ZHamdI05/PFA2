@@ -40,3 +40,17 @@ C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.BL\obj\Debug\net6.0\refint\D
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.BL\obj\Debug\net6.0\Database.BL.pdb
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.BL\obj\Debug\net6.0\Database.BL.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.BL\obj\Debug\net6.0\ref\Database.BL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\bin\Debug\net6.0\Database.BL.deps.json
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\bin\Debug\net6.0\Database.BL.runtimeconfig.json
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\bin\Debug\net6.0\Database.BL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\bin\Debug\net6.0\Database.BL.pdb
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.csproj.AssemblyReference.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.AssemblyInfoInputs.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.AssemblyInfo.cs
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.csproj.CoreCompileInputs.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\refint\Database.BL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.pdb
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\Database.BL.genruntimeconfig.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.BL\obj\Debug\net6.0\ref\Database.BL.dll

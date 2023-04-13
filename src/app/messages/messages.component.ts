@@ -7,9 +7,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent {
-  // constructor(private _dataService:DataService){
+  public users:any;
+  constructor(private _dataService:DataService){
 
-  // }
+  }
   createImageUrl(byteArray:string){
 
 

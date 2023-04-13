@@ -7,17 +7,19 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-
+  public loginToken='';
   constructor(private http:HttpClient) { }
   public messageUrl='';
   public projectUrl='https://localhost:7007/api/Search/';
+  public registerUrl='';
+  public loginUrl='';
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }
   searchProject(prompt:string){
     let promptParams = new HttpParams().set('prompt', prompt);
-    const p:any=this.http.get(`${this.projectUrl}`+prompt);
-    console.log("check "+p);
+    const p:any=this.http.get<IProject[]>(`${this.projectUrl}`+prompt);
+    console.log("check "+p[0]);
     return p;//,{params:promptParams}
     
   }
@@ -37,5 +39,19 @@ export class DataService {
 
   public getEvent() {
     return this.eventSubject.asObservable();
+  }
+
+  public register(userData:any){
+    return this.http.post(this.registerUrl,userData);
+    
+  }
+  public login(loginData:any){
+    return this.http.post(this.loginUrl,loginData);
+  }
+  public setToken(t:string){
+    this.loginToken=t;
+  }
+  public getToken(){
+    return this.loginToken;
   }
 }

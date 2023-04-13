@@ -15,6 +15,7 @@ import { ProjectFormComponent } from './project-form/project-form.component';
 import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     ProjectsComponent,
     MessagesComponent,
     ProjectFormComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { IProject } from '../ProjectInterface';
 
 @Component({
   selector: 'app-projects',
@@ -16,21 +17,21 @@ export class ProjectsComponent {
   public searchPrompt='';
   // public statusRadio:HTMLInputElement|null = document.querySelector('input[name="status"]:checked');
   // public statusValue = this.statusRadio ? this.statusRadio.value : null;
-  public projects:any;
+  public projects:IProject[]=[];
   
   ngOnInit(){
     // use when needed
     this.projects=[
       {
-        projectId:null,
-        projectName:null,
-        description:null,
-        status:null,
-        createdOn:null,
-        budget:null,
-        region:null,
-        industry:null,
-        sector:null
+        projectId:10,
+        projectName:'name',
+        description:'desc',
+        status:'on hold',
+        createdOn:'10/10/1000',
+        budget:1000,
+        region:'reg',
+        industry:'ind',
+        sector:'sec'
       }
     ]
   }

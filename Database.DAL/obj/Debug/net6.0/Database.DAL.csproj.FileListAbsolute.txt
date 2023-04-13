@@ -49,3 +49,20 @@ C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.DAL\obj\Debug\net6.0\refint\
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.DAL\obj\Debug\net6.0\Database.DAL.pdb
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.DAL\obj\Debug\net6.0\Database.DAL.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Nouveau dossier\PFA2\Database.DAL\obj\Debug\net6.0\ref\Database.DAL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.DAL.deps.json
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.DAL.runtimeconfig.json
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.DAL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.DAL.pdb
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.BL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\bin\Debug\net6.0\Database.BL.pdb
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.csproj.AssemblyReference.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.AssemblyInfoInputs.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.AssemblyInfo.cs
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.csproj.CoreCompileInputs.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.csproj.CopyComplete
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\refint\Database.DAL.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.pdb
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\Database.DAL.genruntimeconfig.cache
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\Database.DAL\obj\Debug\net6.0\ref\Database.DAL.dll

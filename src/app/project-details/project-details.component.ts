@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { DataService } from '../data.service';
 import { Subscription } from 'rxjs';
+import { IProject } from '../ProjectInterface';
 
 @Component({
   selector: 'app-project-details',
@@ -8,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent {
-  public project:any;
+  public project!: IProject;
   
   private subscription: Subscription;
   constructor(private _dataService:DataService){

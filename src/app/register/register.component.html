@@ -5,22 +5,22 @@
                 <h1>Register</h1>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="FirstName">
+					<input #first type="text" class="login__input" placeholder="First Name">
 				</div>
                 <div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="LastName">
+					<input #last type="text" class="login__input" placeholder="Last Name">
 				</div>
                 <div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Email">
+					<input #email type="text" class="login__input" placeholder="Email">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
+					<input #pass type="password" class="login__input" placeholder="Password">
 				</div>
                 
-				<button class="button login__submit">
+				<button class="button login__submit" (click)="registerUser(first.value,last.value,email.value,pass.value)">
 					<span class="button__text">Register</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				

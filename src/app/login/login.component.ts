@@ -27,7 +27,8 @@ export class LoginComponent {
     }
     else{
       this.dataService.setToken(this.loginToken);
-      this.router.navigate(['feed']);// this should be all
+      this.router.navigate(['feed']);// this should be all, change feed to something else
+      
     }
   }
 

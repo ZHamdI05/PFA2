@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MySocialNetwork.UI';
   public loginToken='';
+  public expanded={ 
+    "expanded": false,
+    past:false
+  }
+  
+  expandChat() {
+    
+    this.expanded.expanded = !this.expanded.expanded ;
+    
+  }
+  shrinkChat(){
+    this.expanded.expanded = false;
+  }
+  
 }

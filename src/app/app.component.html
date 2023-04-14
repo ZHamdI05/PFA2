@@ -33,5 +33,14 @@
       </div>
     </div>
   </nav>
+<!-- <div id="chatbotContainer">
+  <p>Smart Assistent</p>
+  <app-chatbot  id="chatbot"></app-chatbot>
+</div>   -->
+<div class="chat-head" [ngClass]="expanded" >
+  <img src="assets/chat-icon.svg" alt="Chat icon" (click)="expandChat()" id="chatbot-img">
+  <app-chatbot class="chat-head-text">
+  </app-chatbot>
+</div>
 
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>

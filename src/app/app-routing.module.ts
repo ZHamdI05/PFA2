@@ -9,6 +9,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,12 @@ const routes: Routes = [
   },{
     path:'messages',
     component:MessagesComponent
+  },{
+    path:'timeline',
+    component:TimelineComponent
+  },{
+    path:'profile',
+    component:ProfileComponent
   }
 ];
 

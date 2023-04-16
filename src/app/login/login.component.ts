@@ -21,13 +21,13 @@ export class LoginComponent {
       email:email,
       password:pass
     }
-    this.dataService.login(loginData).subscribe((rep:any) => this.loginToken=rep.loginToken);
+    this.dataService.login(loginData).subscribe((rep:any) => this.loginToken=rep.loginToken);// I may need the id too
     if(this.loginToken===''){
       alert('wrong email or password');
     }
     else{
       this.dataService.setToken(this.loginToken);
-      this.router.navigate(['feed']);// this should be all, change feed to something else
+      this.router.navigate(['timeline']);// this should be all, change feed to something else
       
     }
   }

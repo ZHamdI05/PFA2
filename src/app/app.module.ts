@@ -16,6 +16,9 @@ import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     MessagesComponent,
     ProjectFormComponent,
     ProjectDetailsComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    TimelineComponent,
+    ProfileComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

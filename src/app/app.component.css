@@ -42,12 +42,13 @@
   }
   
   .chat-head.expanded {
-    width: 400px;
+    width: 500px;
     height: 500px;
     border-radius: 10px;
     cursor: default;
     overflow-y: scroll;
     margin-right: 60px;
+    background-color: transparent;
   }
   
   .chat-head.expanded .chat-head-icon {
@@ -61,10 +62,10 @@
     margin-top: 20px;
   }
   #chatbot-img {
-    float:right;
+    float:left;
     width: 60px;
     height: 60px;
     border: #fff solid;
     border-radius: 50%;
+    clear: both;
   }
-  

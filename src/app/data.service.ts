@@ -13,6 +13,7 @@ export class DataService {
   public projectUrl='https://localhost:7007/api/Search/';
   public registerUrl='';
   public loginUrl='';
+  public chatbotUrl='';
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }
@@ -53,5 +54,8 @@ export class DataService {
   }
   public getToken(){
     return this.loginToken;
+  }
+  public chatbotMessage(message:string){
+    return this.http.post(this.chatbotUrl,{prompt:message})//check the api
   }
 }

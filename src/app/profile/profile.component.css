@@ -318,7 +318,9 @@ ul.bullet-list li h3 {
 	color: #171717;
 	margin:0; padding:0;
 }
-
+a:hover{
+	cursor: pointer;
+}
 
 /** Date Box
  *************************************************** **/

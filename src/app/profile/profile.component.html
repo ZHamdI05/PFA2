@@ -43,66 +43,29 @@
     
                 <div class="tabs white nomargin-top">
                     <ul class="nav nav-tabs tabs-primary">
-                        <li class="active">
-                            <a href="#overview" data-toggle="tab">Overview </a>
+                        <li  [ngClass]="overviewActive">
+                            <a (click)="goOverview()" data-toggle="tab">Overview </a>
                         </li>
-                        <li>
-                            <a href="#edit" data-toggle="tab">Edit</a>
+                        <li [ngClass]="editActive">
+                            <a (click)="goEdit()" data-toggle="tab">Edit</a>
                         </li>
                     </ul>
     
                     <div class="tab-content">
     
                         <!-- Overview -->
-                        <div id="overview" class="tab-pane active">
-                            <form class="well">
+                        <div id="overview" class="tab-pane" [ngClass]="overviewActive">
+                            <form class="well" style="overflow: auto;">
                                 <textarea rows="2" class="form-control" placeholder="What's on your mind?"></textarea>
                                 <div class="margin-top-10">
                                     <button type="submit" class="btn btn-sm btn-primary pull-right">Post</button>
-                                    <a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add a Location"><i class="fa fa-map-marker"></i></a>
-                                    <a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add Photo"><i class="fa fa-camera"></i></a>
-                                    <a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add File"><i class="fa fa-file"></i></a>
                                 </div>
                             </form>
     
                             <hr class="invisible half-margins">
                             <!-- COMMENT -->
                             <ul class="comment list-unstyled padding-10">
-                                <li class="comment">
-                                    <!-- avatar -->
-                                    <img class="avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png" width="50" height="50" alt="avatar">
-                                    <!-- comment body -->
-                                    <div class="comment-body"> 
-                                        <a href="#" class="comment-author">
-                                            <small class="text-muted pull-right"> 12 Minutes ago </small>
-                                            <span>Melisa Doe</span>
-                                        </a>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-                                            euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet 
-                                            dolore magna aliquam tincidunt erat volutpat.  
-                                        </p>
-                                    </div><!-- /comment body -->
-    
-                                    <!-- options -->
-                                    <ul class="list-inline size-11 margin-top-10">
-                                        <li>
-                                            <a href="#" class="text-info"><i class="fa fa-reply"></i> Reply</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="text-muted">Show All Comments (36)</a>
-                                        </li>
-                                        <li class="pull-right">
-                                            <a href="#" class="text-danger">Delete</a>
-                                        </li>
-                                        <li class="pull-right">
-                                            <a href="#" class="text-primary">Edit</a>
-                                        </li>
-                                    </ul>
-                                </li><!-- /options -->
+                                
     
                                 <li class="comment comment-reply">
     
@@ -282,7 +245,7 @@
                         </div>
     
                         <!-- Edit -->
-                        <div id="edit" class="tab-pane">
+                        <div id="edit" class="tab-pane" [ngClass]="editActive">
     
                             <form class="form-horizontal padding-10" method="get">
                                 <h4>Personal Information</h4>
@@ -318,18 +281,9 @@
                                 <h4>About</h4>
                                 <fieldset>
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label">Public Profile</label>
-                                        <div class="col-md-8">
-                                            <label class="checkbox">
-                                                <input type="checkbox" value="1" checked="checked" id="profilePublic">
-                                                <i></i> Checkbox 1
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
                                         <div class="col-md-8">
-                                            <textarea class="form-control" rows="3" id="profileBio"></textarea>
+                                            <textarea #bio class="form-control" rows="3" id="profileBio"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -338,11 +292,12 @@
                                             <div class="col-md-8">
                                                 <label for="file" class="input input-file">
                                                     <div class="button">
-                                                        <input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse
+                                                        <input #pfp type="file" id="file" (change)="changePfp($event)" onchange="this.parentNode.nextSibling.value = this.value">
                                                     </div>
-                                                    <input type="text" readonly="">
+                                                    <input type="text" readonly=""><br>
+                                                    <img src="{{url}}" alt="fail" style="max-width: 50%;">
                                                 </label>
-                                                <a href="#" class="btn btn-danger btn-xs nomargin"><i class="fa fa-times"></i> Remove Current Image</a>
+                                                <a (click)="removeImage(pfp)" class="btn btn-danger btn-xs nomargin"><i class="fa fa-times"></i> Remove Current Image</a>
                                             </div>
                                         </div>
                                     </div>
@@ -421,11 +376,8 @@
         </div>
     </div>
     </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        
-
-    </script>
+    <script type="text/javascript"></script> -->
 </body>
 </html>

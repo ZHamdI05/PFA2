@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,12 @@ const routes: Routes = [
   },{
     path:'profile',
     component:ProfileComponent
+  },{
+  path:'post',
+  component:PostComponent
   }
+
+  
 ];
 
 @NgModule({

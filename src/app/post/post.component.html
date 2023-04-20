@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
 
-  <title>bs4 simple social network post - Bootdey.com</title>
+  <title>post</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -15,10 +15,10 @@
 <body>
   <div class="container posts-content">
     <div class="row">
-      <div class="col-lg-6">
-        <div class="card mb-4">
+      <div class="col-lg-12">
+        <div class="card mb-8">
           <div class="card-body">
-            <div class="media mb-3">
+            <div class="media mb-6">
               <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="d-block ui-w-40 rounded-circle"
                 alt="">
               <div class="media-body ml-3">
@@ -77,7 +77,14 @@
           </div>
         </div>
       </div>
-      
+      <div class="input-group">
+        <input id="btn-input" type="text" class="form-control" placeholder="Type your comment...">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" id="btn-chat">
+                <i class="fa fa-reply"></i> Comment
+            </button> 
+        </span>
+    </div>
     </div>
   </div>
   <!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

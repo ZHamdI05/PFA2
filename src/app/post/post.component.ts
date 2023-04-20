@@ -10,14 +10,7 @@ export class PostComponent {
   @Input() public post:any;
   constructor(private dataService:DataService){}
   ngOnInit(){
-    this.post={
-      creatorName:'Hamdi wahed',
-      creationDate:new Date(),
-      content:'some content',
-      likes:100,
-      comments:[{},{},{}],
-      
-    }
+    
   }
   like(){
     //do something

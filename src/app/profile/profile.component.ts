@@ -51,4 +51,12 @@ export class ProfileComponent {
     reader.readAsArrayBuffer(file);
     
   }
+  public posts=[{
+    creatorName:'Hamdi wahed',
+    creationDate:new Date(),
+    content:'some content',
+    likes:100,
+    comments:[{},{},{}],
+    
+  }];
 }

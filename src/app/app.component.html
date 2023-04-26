@@ -7,10 +7,10 @@
             <a class="nav-link" routerLink="">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="about">About</a>
+            <a class="nav-link" routerLink="timeline">Timeline</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact">Contact</a>
+            <a class="nav-link" routerLink="profile">Profile</a>
           </li>
           <form class="d-flex" style="width: 400px;">
             <input class="form-control me-2" type="text" placeholder="Search">
@@ -37,8 +37,8 @@
   <p>Smart Assistent</p>
   <app-chatbot  id="chatbot"></app-chatbot>
 </div>   -->
-<div class="chat-head" [ngClass]="expanded" >
-  <img src="assets/chat-icon.svg" alt="Chat icon" (click)="expandChat()" id="chatbot-img">
+<div class="chat-head" [ngClass]="expanded" style="z-index: 5;">
+  <img src="assets/images/chatbotlogo.png" alt="Chat icon" (click)="expandChat()" id="chatbot-img">
   <app-chatbot class="chat-head-text" style="background-color: blue; overflow: scroll;">
   </app-chatbot>
 </div>

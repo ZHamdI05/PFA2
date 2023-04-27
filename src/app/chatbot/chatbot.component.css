@@ -221,6 +221,8 @@ body{margin-top:20px;}
 .chat-container {
     position: relative;
     padding: 1rem;
+    overflow-y: scroll;
+    max-height: 500px;
 }
 
 .chat-container li.chat-left,

@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-WebAPI-e2e4cc53-0a44-4eb2-a117-befda4c8282a</UserSecretsId>
   </PropertyGroup>
-
+<!-- change version to 6.0.12 if it shows an error -->
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />

@@ -12,10 +12,10 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="profile">Profile</a>
           </li>
-          <form class="d-flex" style="width: 400px;">
+          <!-- <form class="d-flex" style="width: 400px;">
             <input class="form-control me-2" type="text" placeholder="Search">
             <button class="btn btn-primary" type="button">Search</button>
-          </form>
+          </form> -->
           <li class="nav-item">
             <a class="nav-link" routerLink="projects">Projects</a>
           </li>
@@ -33,13 +33,10 @@
       </div>
     </div>
   </nav>
-<!-- <div id="chatbotContainer">
-  <p>Smart Assistent</p>
-  <app-chatbot  id="chatbot"></app-chatbot>
-</div>   -->
+
 <div class="chat-head" [ngClass]="expanded" style="z-index: 5;">
   <img src="assets/images/chatbotlogo.png" alt="Chat icon" (click)="expandChat()" id="chatbot-img">
-  <app-chatbot class="chat-head-text" style="background-color: blue; overflow: scroll;">
+  <app-chatbot class="chat-head-text" style="background-color: blue; ">
   </app-chatbot>
 </div>
 

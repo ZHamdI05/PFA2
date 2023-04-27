@@ -19,7 +19,7 @@
         </li> -->
     </ul>
     <div class="form-group mt-3 mb-0">
-        <textarea #message class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+        <textarea #message id="msg-text" class="form-control" rows="3" placeholder="Type your message here..."></textarea>
         <button class="send" (click)="sendMessage(message.value)">Send</button> <!--  -->
     </div>
 </div>

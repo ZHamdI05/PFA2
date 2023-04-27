@@ -38,6 +38,7 @@ export class ChatbotComponent {
     this.dataService.chatbotMessage(prompt).subscribe(res => response=res);// check response format
     now=new Date();
     this.conversation[this.conversation?.length]={user:'Fekrti Assistant',sendDate:now,type:{"chat-left":true,"chat-right":false},message:response.message};//verify
+    // document.getElementById('msg-text')?.value?='';
 
 
   }

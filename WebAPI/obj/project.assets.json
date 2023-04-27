@@ -97,7 +97,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.12": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
@@ -116,7 +116,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.10": {
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.12": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
@@ -1928,10 +1928,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": {
-      "sha512": "4SBTyAuYHSiFi/AiqlKiKpl2+EkKaS/q1zeDI4L88cMmy5P01pse25gOAyzfWycI8voz+d1FwTIuqhWCH87IJQ==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.12": {
+      "sha512": "rmuhCPoty7f44XoLwQeGlUw0RzGfDBbb48hMqsodbaYi92KPIZJJjf/f2fu+F80LhLWPiCt6ftcCpG9U0nsWUA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.10",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1939,14 +1939,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.6.0.10.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.10": {
-      "sha512": "4WeVZKSmFha/qIN+NuiC1xASdFHT5aeFy2fEcwVk2zLqMoqCrv5C2/KEJKgOEQxpuJJgX/lQISR3jBvlmPlv5Q==",
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/6.0.12": {
+      "sha512": "Ypg8aLyBjEnqwj1sLoX4rQZClfNOiNNEsvwjJCgTsGPNSxeJXWSGCJCigQr7T+4lOMaQPtORayoMVMxIb31hmw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.openidconnect/6.0.10",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/6.0.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1954,7 +1954,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.xml",
-        "microsoft.aspnetcore.authentication.openidconnect.6.0.10.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.openidconnect.6.0.12.nupkg.sha512",
         "microsoft.aspnetcore.authentication.openidconnect.nuspec"
       ]
     },
@@ -4703,8 +4703,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Database.DAL >= 1.0.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.10",
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.10",
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.12",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.10",
       "Microsoft.Identity.Web >= 2.9.0",
@@ -4754,13 +4753,9 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[6.0.10, )"
-          },
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
             "target": "Package",
-            "version": "[6.0.10, )"
+            "version": "[6.0.12, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -4811,25 +4806,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Passage à une version antérieure du package détecté : Microsoft.AspNetCore.Authentication.JwtBearer de 6.0.12 à 6.0.10. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n WebAPI -> Microsoft.Identity.Web 2.9.0 -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 6.0.12) \r\n WebAPI -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 6.0.10)",
-      "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Passage à une version antérieure du package détecté : Microsoft.AspNetCore.Authentication.OpenIdConnect de 6.0.12 à 6.0.10. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n WebAPI -> Microsoft.Identity.Web 2.9.0 -> Microsoft.Identity.Web.TokenAcquisition 2.9.0 -> Microsoft.AspNetCore.Authentication.OpenIdConnect (>= 6.0.12) \r\n WebAPI -> Microsoft.AspNetCore.Authentication.OpenIdConnect (>= 6.0.10)",
-      "libraryId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

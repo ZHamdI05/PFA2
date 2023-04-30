@@ -21,7 +21,8 @@ export class DataService {
   searchProject(prompt:string){
     let promptParams = new HttpParams().set('prompt', prompt);
     const p:any=this.http.get<IProject[]>(`${this.projectUrl}`+prompt);
-    console.log("check "+p[0]);
+    console.log("check ");
+    console.log(p);
     return p;//,{params:promptParams}
     
   }

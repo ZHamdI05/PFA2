@@ -129,7 +129,9 @@ body{margin-top:20px;}
     position: relative;
     margin-right: 10px;
 }
-
+text-area {
+    resize: none;
+}
 .users .person .user img {
     width: 48px;
     height: 48px;
@@ -221,7 +223,7 @@ body{margin-top:20px;}
 .chat-container {
     position: relative;
     padding: 1rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: 500px;
 }
 
@@ -379,7 +381,7 @@ ul {
     box-shadow: none;
 }
 .send{
-    padding: 5px 20px;
+    padding: 5px 5px;
     background-color: #8baaca;
     color: #fff;
     border: none;

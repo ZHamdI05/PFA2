@@ -1,5 +1,5 @@
 <div class="chat-container">
-    <ul class="chat-box chatContainerScroll">
+    <ul class="chat-box chatContainerScroll" style="overflow-y: scroll; height: 300px;">
         <li #left *ngFor="let m of conversation" [ngClass]="m.type" style="position: relative;">
             <div class="chat-avatar">
                 <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
@@ -18,8 +18,8 @@
             </div>
         </li> -->
     </ul>
-    <div class="form-group mt-3 mb-0">
-        <textarea #message id="msg-text" class="form-control" rows="3" placeholder="Type your message here..."></textarea>
-        <button class="send" (click)="sendMessage(message.value)">Send</button> <!--  -->
+    <div class="form-group mt-3 mb-0" style="display:flex;">
+        <textarea style="display: inline-block; width: 80%;flex-grow: 1;" #message id="msg-text" class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+        <button class="send" (click)="sendMessage(message.value)" style="display: inline-block; width: 20%;">Send</button> <!--  -->
     </div>
 </div>

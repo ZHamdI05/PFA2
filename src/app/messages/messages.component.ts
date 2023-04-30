@@ -8,8 +8,47 @@ import { DataService } from '../data.service';
 })
 export class MessagesComponent {
   public users:any;
+  public messages:any;
   constructor(private _dataService:DataService){
 
+  }
+  ngOnInit(){
+    this.users=[
+      {
+        id:1,
+        firstName:"Hamdi",
+        lastName:"Zor",
+      },{
+        id:2,
+        firstName:"Hedi",
+        lastName:"Zoom",
+      }
+    ]
+    this.messages=[{
+      id:0,
+      messageDate:new Date(),
+      content:"lorem ipsum?",
+      from:"Skander",
+      to:""
+    },{
+      id:1,
+      messageDate:new Date(),
+      content:"lorem ipsum yes",
+      from:"",
+      to:"Skander"
+    },{
+      id:2,
+      messageDate:new Date(),
+      content:"lorem ipsum not yet",
+      from:"Skander",
+      to:""
+    }
+    ]
+    // [
+    //   {
+    //     userId:1,
+    //     messages:''
+    // }];
   }
   createImageUrl(byteArray:string){
 
@@ -28,5 +67,10 @@ export class MessagesComponent {
     searchContact(name:string){
 
     }
-  
+    public sendMessage(msg:string){
+
+    }
+    public openConversation(id:number){
+      // get conversation
+    }
 }

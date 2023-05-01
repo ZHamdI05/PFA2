@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "IronPython": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -52,9 +66,21 @@
               "target": "Package",
               "version": "[2.0.1, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            },
+            "Python.Included": {
+              "target": "Package",
+              "version": "[3.11.2, )"
+            },
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "python": {
+              "target": "Package",
+              "version": "[3.11.3, )"
             }
           },
           "imports": [
@@ -73,34 +99,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "projectName": "Database.DAL",
-        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {
-                "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj"
+              "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj"
               }
             }
           }
@@ -115,6 +143,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "IronPython": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -139,9 +179,21 @@
               "target": "Package",
               "version": "[2.0.1, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            },
+            "Python.Included": {
+              "target": "Package",
+              "version": "[3.11.2, )"
+            },
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "python": {
+              "target": "Package",
+              "version": "[3.11.3, )"
             }
           },
           "imports": [
@@ -160,34 +212,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj": {
-                "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj"
+              "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj"
               }
             }
           }
@@ -202,6 +256,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "IronPython": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.14, )"
@@ -209,6 +271,10 @@
             "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
               "target": "Package",
               "version": "[6.0.14, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -228,6 +294,14 @@
               "target": "Package",
               "version": "[2.0.1, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            },
+            "Python.Included": {
+              "target": "Package",
+              "version": "[3.11.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -235,6 +309,10 @@
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "python": {
+              "target": "Package",
+              "version": "[3.11.3, )"
             }
           },
           "imports": [
@@ -256,7 +334,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,4 @@
-﻿using Database.BL;
+using Database.BL;
 using Database.DAL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,10 +18,16 @@ namespace WebAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ApplicationUser>>> GetUsers()
+         [HttpGet("{id}")] // Get project by Id
+        public async Task<IActionResult> GetProjects(int id)
         {
-            return await _context.Users.ToListAsync();
+            
+            var project = await _context.Projects.FindAsync(id);
+
+            if(project !=null)
+                return Ok(project);
+
+            return NotFound();
         }
 
         [HttpGet("{id}")]

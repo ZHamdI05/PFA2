@@ -19,6 +19,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostComponent } from './post/post.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PostComponent } from './post/post.component';
     ChatbotComponent,
     TimelineComponent,
     ProfileComponent,
-    PostComponent
+    PostComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,

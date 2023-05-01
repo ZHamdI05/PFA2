@@ -367,6 +367,7 @@ D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\obj\Debug\net6.0\refint\WebAPI
 D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+<<<<<<< HEAD
 C:\Users\Asus\Desktop\here!\PFA2\WebAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Asus\Desktop\here!\PFA2\WebAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\Asus\Desktop\here!\PFA2\WebAPI\bin\Debug\net6.0\WebAPI.exe
@@ -630,3 +631,21 @@ C:\Users\Asus\Desktop\here\PFA2\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\Asus\Desktop\here\PFA2\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\Asus\Desktop\here\PFA2\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\Users\Asus\Desktop\here\PFA2\WebAPI\bin\Debug\net6.0\OpenAI_API.dll
+=======
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.DataProtection.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Abstractions.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Web.Certificate.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Web.Certificateless.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Web.Diagnostics.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Web.TokenAcquisition.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.Identity.Web.TokenCache.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.LoggingExtensions.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Validators.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
+D:\PFA2\MySocialNetwork\MySocialNetwork.UI\WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+>>>>>>> 1e63a3eadc681e9ef293e9ef6a1da64d123e2405

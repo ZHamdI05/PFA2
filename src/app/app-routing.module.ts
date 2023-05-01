@@ -12,6 +12,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostComponent } from './post/post.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,9 @@ const routes: Routes = [
   },{
   path:'post',
   component:PostComponent
+  },{
+    path:'resources',
+    component:ResourcesComponent
   }
 
   

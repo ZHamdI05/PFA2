@@ -48,8 +48,11 @@
     cursor: default;
     margin-right: 60px;
     background-color: transparent;
+    /* overflow-y: scroll; */
   }
-  
+  .chat-head.expanded:hover{
+    transform: none;
+  }
   .chat-head.expanded .chat-head-icon {
     font-size: 48px;
     margin-top: 40px;
@@ -67,4 +70,5 @@
     border: #fff solid;
     border-radius: 50%;
     clear: both;
+    bottom:10%;
   }

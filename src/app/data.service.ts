@@ -7,7 +7,8 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  public loginToken='';
+  public loginToken='xx';
+  public userId='11';
   constructor(private http:HttpClient) { }
   public messageUrl='';
   public projectUrl='https://localhost:7007/api/Search/';
@@ -20,7 +21,8 @@ export class DataService {
   searchProject(prompt:string){
     let promptParams = new HttpParams().set('prompt', prompt);
     const p:any=this.http.get<IProject[]>(`${this.projectUrl}`+prompt);
-    console.log("check "+p[0]);
+    console.log("check ");
+    console.log(p);
     return p;//,{params:promptParams}
     
   }
@@ -49,11 +51,22 @@ export class DataService {
   public login(loginData:any){
     return this.http.post(this.loginUrl,loginData);
   }
-  public setToken(t:string){
-    this.loginToken=t;
+  public setToken(loginResp:any){
+    sessionStorage.setItem('loginToken', loginResp.loginToken);
+    this.loginToken=loginResp.loginToken;
+    sessionStorage.setItem('userId', loginResp.userId);
+    this.userId=loginResp.userId;
   }
   public getToken(){
-    return this.loginToken;
+    this.loginToken=sessionStorage.getItem('loginToken')+'';
+    return {loginToken:this.loginToken,userId:this.userId};
+  }
+  public logout(){
+    sessionStorage.removeItem('loginToken');
+    this.loginToken='';
+    sessionStorage.removeItem('userId');
+    this.userId='';
+    
   }
   public chatbotMessage(message:string){
     return this.http.post(this.chatbotUrl,{prompt:message})//check the api

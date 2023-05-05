@@ -1,4 +1,4 @@
-﻿using Database.BL;
+using Database.BL;
 using Database.DAL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +16,8 @@ namespace WebAPI.Controllers
         public ProjectController(WebAPIDbContext context) 
         {
              _context= context;
+             ExportCSV.Export("Projects","projects.csv");
+             ExportCSV.Export("Ratings","ratings.csv");
         }
 
         [HttpGet] // Get all projects 

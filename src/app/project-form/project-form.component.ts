@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./project-form.component.css']
 })
 export class ProjectFormComponent {
-  constructor(_dataService:DataService){
+  constructor(private _dataService:DataService){
 
   }
   submitProject(name:string,budget:string,industry:string,sector:string,description:string,region:string){
@@ -22,5 +22,6 @@ export class ProjectFormComponent {
     industry:industry,
     sector:sector
     }
+    this._dataService.submitProject(project);
   }
 }

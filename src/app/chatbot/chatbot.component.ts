@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
-import { IChatbotResponse } from './responseinterface';
+import { IChatbotResponse } from '../interfaces/ChatbotResponse';
 
 @Component({
   selector: 'app-chatbot',

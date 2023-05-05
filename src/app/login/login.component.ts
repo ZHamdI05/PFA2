@@ -10,8 +10,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   public loginResp={
-    loginToken:'',
-    userId:''
+    access_token:'',
+    token_type:'Bearer',
+    expires_in:'',
+    user:{
+      id:-1,
+      firstName:'',
+      lastName:'',
+      email:'',
+      password:'',
+      profilePicture:''
+    }
   }
   
   constructor(private dataService:DataService, private router:Router){}
@@ -20,20 +29,21 @@ export class LoginComponent {
   //   this.childEvent.emit(this.loginToken);
   // }
   public login(email:string,pass:string){
-    this.loginResp.loginToken='';
-    this.loginResp.userId='';
     let loginData={
       email:email,
       password:pass
     }
-    this.dataService.login(loginData).subscribe((rep:any) => this.loginResp=rep);// I may need the id too
-    if(this.loginResp.loginToken===''){
-      alert('wrong email or password');
-    }
-    else{
-      this.dataService.setToken(this.loginResp);
-      this.router.navigate(['timeline']);// this should be all, change feed to something else
+    
+    this.dataService.login(loginData).subscribe(rep => {
+      if(this.loginResp.access_token===''){
+        alert('wrong email or password');
       }
+      else{
+        this.dataService.setToken(this.loginResp.access_token);
+        this.router.navigate(['timeline']);// this should be all, change feed to something else
+        }  
+    });
+    
   }
 
 }

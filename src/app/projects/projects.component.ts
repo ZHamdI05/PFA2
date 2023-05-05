@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
-import { IProject } from '../ProjectInterface';
+import { IProject } from '../interfaces/ProjectInterface';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +17,7 @@ export class ProjectsComponent {
   public searchPrompt='';
   // public statusRadio:HTMLInputElement|null = document.querySelector('input[name="status"]:checked');
   // public statusValue = this.statusRadio ? this.statusRadio.value : null;
-  public projects:IProject[]=[];
+  public projects:any;
   
   ngOnInit(){
     // use when needed
@@ -34,6 +34,9 @@ export class ProjectsComponent {
         sector:'sec'
       }
     ]
+    this._dataService.getAllProjects().subscribe(res=>{
+      this.projects=res;
+    });
   }
   search(prompt:string){
 
@@ -46,15 +49,14 @@ export class ProjectsComponent {
   rate(projectId:string){
     let rateRadio:HTMLInputElement|null = document.querySelector('input[name="rate"]:checked');
     let rateValue = rateRadio ? rateRadio.value : null;
+
   }
   showProjectDetails(id:string|number){
     const projectDetails=document.getElementById('projectDetails');
     const close:any=document.getElementById('close');
     if(projectDetails){
       const project = this.projects.find((p:any) => p.projectId === id);
-
-      this._dataService.setProjectData(project);
-      
+      this._dataService.setProjectData(project);  
       this._dataService.emitEvent(project);
       projectDetails.style.display="block";
       close.style.display="block";

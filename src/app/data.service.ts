@@ -4,7 +4,7 @@ import { IMessage } from './MessageInterface';
 import { IProject } from './ProjectInterface';
 import { Subject } from 'rxjs';
 import { HttpHeaders } from '@angular/common/http';
-import { IResponse } from './chatbot/responseinterface';
+import { IChatbotResponse } from './chatbot/responseinterface';
 @Injectable({
   providedIn: 'root'
 })
@@ -79,6 +79,6 @@ export class DataService {
     
   }
   public chatbotMessage(message:string){
-    return this.http.post<IResponse[]>(this.chatbotUrl,{prompt:message},this.httpOptions);//check the api
+    return this.http.post<IChatbotResponse[]>(this.chatbotUrl,{message:message,sender:'test'});//check the api
   }
 }

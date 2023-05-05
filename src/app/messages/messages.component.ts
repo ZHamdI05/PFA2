@@ -50,6 +50,7 @@ export class MessagesComponent {
     //     messages:''
     // }];
   }
+  public conversation:any;
   createImageUrl(byteArray:string){
 
 
@@ -68,7 +69,17 @@ export class MessagesComponent {
 
     }
     public sendMessage(msg:string){
-
+      let response:any;
+    let now=new Date();
+    this.conversation[this.conversation?.length]={user:'Me',sendDate:now,type:{"chat-left":false,"chat-right":true},message:prompt};
+    this._dataService.chatbotMessage(msg).subscribe(res => response=res);// check response format
+    now=new Date();
+    this.conversation[this.conversation?.length]={user:'Fekrti Assistant',sendDate:now,type:{"chat-left":true,"chat-right":false},message:response.message};//verify
+    // document.getElementById('msg-text')?.value?='';
+    let element = document.getElementById('chats');
+    console.log(element);
+    if(element) {element.scrollTop = element.scrollHeight;
+    console.log('element');}
     }
     public openConversation(id:number){
       // get conversation

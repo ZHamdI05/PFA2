@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { IMessage } from './messages/MessageInterface';
+import { IMessage } from './MessageInterface';
 import { IProject } from './ProjectInterface';
 import { Subject } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
+import { IResponse } from './chatbot/responseinterface';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +17,14 @@ export class DataService {
   public registerUrl='';
   public loginUrl='';
   public chatbotUrl='http://localhost:5005/webhooks/rest/webhook';
+  public httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+    })
+  };
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }
@@ -69,6 +79,6 @@ export class DataService {
     
   }
   public chatbotMessage(message:string){
-    return this.http.post(this.chatbotUrl,{prompt:message})//check the api
+    return this.http.post<IResponse[]>(this.chatbotUrl,{prompt:message},this.httpOptions);//check the api
   }
 }

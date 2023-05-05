@@ -65,14 +65,22 @@
                                             How can I help you today?</div>
                                         <div class="chat-hour">08:55 <span class="fa fa-check-circle"></span></div>
                                     </li>
-                                    <li class="chat-right">
+                                    <li #left *ngFor="let m of conversation" [ngClass]="m.type" style="position: relative;">
+                                        <div class="chat-avatar">
+                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
+                                            <div class="chat-name">{{m.user}}</div>
+                                        </div>
+                                        <div class="chat-text">{{m.message}}</div>
+                                        <div class="chat-hour">{{m.sendDate|date:'shortTime'}}<span class="fa fa-check-circle"></span></div>
+                                    </li>
+                                    <!-- <li class="chat-right">
                                         <div class="chat-hour">08:56 <span class="fa fa-check-circle"></span></div>
                                         <div class="chat-text">Hi, Hamdi. How are you?</div>
                                         <div class="chat-avatar">
                                             <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                             <div class="chat-name">Sam</div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="form-group mt-3 mb-0">
                                     <textarea #message class="form-control" rows="3" placeholder="Type your message here..."></textarea>

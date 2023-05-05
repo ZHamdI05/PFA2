@@ -32,12 +32,12 @@ export class ChatbotComponent {
     ]
   }
   sendMessage(prompt:string){
-    let response:any;
+    let response:{"recipient_id":string,"text":string};
     let now=new Date();
     this.conversation[this.conversation?.length]={user:'Me',sendDate:now,type:{"chat-left":false,"chat-right":true},message:prompt};
     this.dataService.chatbotMessage(prompt).subscribe(res => response=res);// check response format
     now=new Date();
-    this.conversation[this.conversation?.length]={user:'Fekrti Assistant',sendDate:now,type:{"chat-left":true,"chat-right":false},message:response.message};//verify
+    this.conversation[this.conversation?.length]={user:'Fekrti Assistant',sendDate:now,type:{"chat-left":true,"chat-right":false},message:response[0].text};//verify
     // document.getElementById('msg-text')?.value?='';
     let element = document.getElementById('chats');
     console.log(element);

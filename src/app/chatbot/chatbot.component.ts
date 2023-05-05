@@ -32,7 +32,7 @@ export class ChatbotComponent {
     ]
   }
   sendMessage(prompt:string){
-    let response:{"recipient_id":string,"text":string};
+    let response:any;
     let now=new Date();
     this.conversation[this.conversation?.length]={user:'Me',sendDate:now,type:{"chat-left":false,"chat-right":true},message:prompt};
     this.dataService.chatbotMessage(prompt).subscribe(res => response=res);// check response format

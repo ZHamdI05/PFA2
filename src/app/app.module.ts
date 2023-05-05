@@ -20,6 +20,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostComponent } from './post/post.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { ProjectModifyComponent } from './project-modify/project-modify.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ResourcesComponent } from './resources/resources.component';
     TimelineComponent,
     ProfileComponent,
     PostComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    ProjectModifyComponent
   ],
   imports: [
     BrowserModule,

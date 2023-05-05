@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-project-form',
-  templateUrl: './project-form.component.html',
-  styleUrls: ['./project-form.component.css']
+  selector: 'app-project-modify',
+  templateUrl: './project-modify.component.html',
+  styleUrls: ['./project-modify.component.css']
 })
-export class ProjectFormComponent {
+export class ProjectModifyComponent {
   constructor(_dataService:DataService){
 
   }
@@ -22,5 +22,7 @@ export class ProjectFormComponent {
     industry:industry,
     sector:sector
     }
+
   }
+  
 }

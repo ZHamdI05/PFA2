@@ -59,4 +59,10 @@ export class ProfileComponent {
     comments:[{},{},{}],
     
   }];
+  public makeAPost(content:string){
+    const post={
+      
+    }
+
+  }
 }

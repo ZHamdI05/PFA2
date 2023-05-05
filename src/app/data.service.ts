@@ -79,6 +79,6 @@ export class DataService {
     
   }
   public chatbotMessage(message:string){
-    return this.http.post<IChatbotResponse[]>(this.chatbotUrl,{message:message,sender:'test'});//check the api
+    return this.http.post<IChatbotResponse[]>(this.chatbotUrl,{message:message,sender:'test'});
   }
 }

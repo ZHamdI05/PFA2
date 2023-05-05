@@ -66,4 +66,5 @@ export class ProjectsComponent {
     if(projectDetails){projectDetails.style.display="none";}
     close.style.display="none";
   }
+  
 }

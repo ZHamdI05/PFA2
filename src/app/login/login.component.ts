@@ -33,8 +33,7 @@ export class LoginComponent {
     else{
       this.dataService.setToken(this.loginResp);
       this.router.navigate(['timeline']);// this should be all, change feed to something else
-      
-    }
+      }
   }
 
 }

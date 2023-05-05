@@ -14,7 +14,7 @@ export class DataService {
   public projectUrl='https://localhost:7007/api/Search/';
   public registerUrl='';
   public loginUrl='';
-  public chatbotUrl='';
+  public chatbotUrl='http://localhost:5005/webhooks/rest/webhook';
   getMessages(id:number){
     return this.http.get<IMessage[]>(this.messageUrl+'/'+id);
   }

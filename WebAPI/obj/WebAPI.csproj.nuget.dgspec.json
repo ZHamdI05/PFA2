@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "projectName": "Database.DAL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,8 +115,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj"
+              "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj"
               }
             }
           }
@@ -192,14 +192,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -216,8 +216,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj"
+              "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj"
               }
             }
           }

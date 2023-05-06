@@ -22,7 +22,7 @@ namespace Database.DAL
 
         public DbSet<Rating> Ratings { get; set; }
 
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
 
         public WebAPIDbContext(DbContextOptions<WebAPIDbContext> options) : base(options)

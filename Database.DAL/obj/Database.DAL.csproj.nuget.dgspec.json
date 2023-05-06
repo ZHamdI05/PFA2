@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj": {}
   },
   "projects": {
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -47,6 +53,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.Saml": {
+              "target": "Package",
+              "version": "[6.29.0, )"
             },
             "Microsoft.ML": {
               "target": "Package",
@@ -73,34 +87,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "projectName": "Database.DAL",
-        "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\Database.DAL.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj": {
-                "projectPath": "D:\\PFA2\\MySocialNetwork\\MySocialNetwork.UI\\Database.BL\\Database.BL.csproj"
+              "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\API\\PFA2\\Database.BL\\Database.BL.csproj"
               }
             }
           }
@@ -115,6 +131,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -135,6 +155,14 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.Saml": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.1, )"
@@ -160,7 +188,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

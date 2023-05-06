@@ -36,10 +36,11 @@ export class ProjectsComponent {
     ]
     this._dataService.getAllProjects().subscribe(res=>{
       this.projects=res;
+      console.log(res);
+      console.log(this.projects);
     });
   }
   search(prompt:string){
-
     this._dataService.searchProject(prompt).subscribe((p:any) => this.projects=p);
     let statusRadio:HTMLInputElement|null = document.querySelector('input[name="status"]:checked');
     let statusValue = statusRadio ? statusRadio.value : null;

@@ -1,8 +1,8 @@
-<div class="chat-container">
-    <ul class="chat-box chatContainerScroll" id="chats" style="overflow-y: scroll; height: 300px;">
-        <li #left *ngFor="let m of conversation" [ngClass]="m.type" style="position: relative;">
+<div class="chat-container" >
+    <ul #scrollMe [scrollTop]="scrollMe.scrollHeight" class="chat-box chatContainerScroll" id="chats" style="overflow-y: scroll; height: 300px;">
+        <li  *ngFor="let m of conversation" [ngClass]="m.type" style="position: relative;">
             <div class="chat-avatar">
-                <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
+                <img src="assets/images/chatbotlogo.png" alt="Retail Admin">
                 <div class="chat-name">{{m.user}}</div>
             </div>
             <div class="chat-text">{{m.message}}</div>

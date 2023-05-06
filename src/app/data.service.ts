@@ -61,11 +61,11 @@ export class DataService {
   }
 
   public register(userData:any){
-    return this.http.post(this.registerUrl,userData);
+    return this.http.post<{status:number}>(this.registerUrl,userData);
     
   }
   public login(loginData:any){
-    return this.http.post<ILoginResponse>(this.loginUrl,loginData,this.httpOptions);
+    return this.http.post<ILoginResponse>(this.loginUrl,loginData);
   }
   public setToken(loginResp:any){
     sessionStorage.setItem('access_token', loginResp.access_token);
@@ -85,7 +85,7 @@ export class DataService {
     
   }
   public chatbotMessage(message:string){
-    return this.http.post<IChatbotResponse[]>(this.chatbotUrl,{message:message,sender:'test'});
+    return this.http.post<IChatbotResponse[]>(this.chatbotUrl,{message:message,sender:'test'});//get sender name from sessionStorage
   }
   public getAllProjects(){
     return this.http.get<IProject[]>(this.projectUrl,this.httpOptions);

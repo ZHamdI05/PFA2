@@ -35,13 +35,15 @@ export class LoginComponent {
     }
     
     this.dataService.login(loginData).subscribe(rep => {
-      if(this.loginResp.access_token===''){
+      if(rep.access_token==undefined){
         alert('wrong email or password');
-      }
-      else{
+        
+      }else{
         this.dataService.setToken(this.loginResp.access_token);
-        this.router.navigate(['timeline']);// this should be all, change feed to something else
-        }  
+        this.router.navigate(['timeline']);
+      }
+      
+      
     });
     
   }

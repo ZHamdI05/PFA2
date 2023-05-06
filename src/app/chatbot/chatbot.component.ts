@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 import { IChatbotResponse } from '../interfaces/ChatbotResponse';
 
@@ -17,21 +17,22 @@ export class ChatbotComponent {
   public userName='';
   ngOnInit(){
     this.conversation=[
-      {
-        user:'Fekrti Assistant',
-        sendDate:new Date(),
-        type:{"chat-left":true,
-        "chat-right":false},
-        message:"Hello, How can I help you today?"
-      },{
-        user:'Me',
-        sendDate:new Date(),
-        type:{"chat-left":false,
-        "chat-right":true},
-        message:"I need more information about Developer Plan."
-      }
+      // {
+      //   user:'Fekrti Assistant',
+      //   sendDate:new Date(),
+      //   type:{"chat-left":true,
+      //   "chat-right":false},
+      //   message:"Hello, How can I help you today?"
+      // },{
+      //   user:'Me',
+      //   sendDate:new Date(),
+      //   type:{"chat-left":false,
+      //   "chat-right":true},
+      //   message:"I need more information about Developer Plan."
+      // }
     ]
   }
+  @ViewChild('message')message!: ElementRef;
   sendMessage(prompt:string){
     let response:IChatbotResponse[]=[];
     let now=new Date();
@@ -43,11 +44,8 @@ export class ChatbotComponent {
     now=new Date();
     //this.conversation[this.conversation?.length]={user:'Fekrti Assistant',sendDate:now,type:{"chat-left":true,"chat-right":false},message:response[0].text};//verify
     // document.getElementById('msg-text')?.value?='';
-    let element = document.getElementById('chats');
-    console.log(element);
-    if(element) {element.scrollTop = element.scrollHeight;
-    console.log('element');}
-
+    
+    this.message.nativeElement.value='';
   }
-
+  
 }

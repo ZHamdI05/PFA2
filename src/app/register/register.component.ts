@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,7 @@ import { DataService } from '../data.service';
 })
 export class RegisterComponent {
   
+
   constructor(private dataService:DataService){}
   public registerUser(first:string,last:string,email:string,pass:string){
     let userData={
@@ -16,7 +18,16 @@ export class RegisterComponent {
       email:email,
       password:pass
     }
-    this.dataService.register(userData).subscribe();
+    this.dataService.register(userData).subscribe(res=> {
+      if(res.status===200){
+        alert('Account created');
+
+
+
+      }
+      else{}
+    });
     // do something with validate
   }
+
 }

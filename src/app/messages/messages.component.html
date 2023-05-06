@@ -52,11 +52,11 @@
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
                             <div class="selected-user">
-                                <span>To: <span class="name">Hamdi Zor</span></span>
+                                <span #toUser>To: <span class="name">Hamdi Zor</span></span>
                             </div>
                             <div class="chat-container">
                                 <ul class="chat-box chatContainerScroll">
-                                    <li class="chat-left">
+                                    <!-- <li class="chat-left">
                                         <div class="chat-avatar">
                                             <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                             <div class="chat-name">Hamdi</div>
@@ -64,8 +64,8 @@
                                         <div class="chat-text">Hello, I'm Hamdi.
                                             How can I help you today?</div>
                                         <div class="chat-hour">08:55 <span class="fa fa-check-circle"></span></div>
-                                    </li>
-                                    <li #left *ngFor="let m of conversation" [ngClass]="m.type" style="position: relative;">
+                                    </li> -->
+                                    <li #left *ngFor="let m of messages" [ngClass]="m.type" style="position: relative;">
                                         <div class="chat-avatar">
                                             <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                             <div class="chat-name">{{m.user}}</div>
@@ -73,6 +73,7 @@
                                         <div class="chat-text">{{m.message}}</div>
                                         <div class="chat-hour">{{m.sendDate|date:'shortTime'}}<span class="fa fa-check-circle"></span></div>
                                     </li>
+                                    
                                     <!-- <li class="chat-right">
                                         <div class="chat-hour">08:56 <span class="fa fa-check-circle"></span></div>
                                         <div class="chat-text">Hi, Hamdi. How are you?</div>
@@ -83,7 +84,7 @@
                                     </li> -->
                                 </ul>
                                 <div class="form-group mt-3 mb-0">
-                                    <textarea #message class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+                                    <textarea #message class="form-control" rows="3" placeholder="Type your message here"></textarea>
                                     <button class="send" (click)="sendMessage(message.value)">Send</button> <!-- (click)="sendMessage(message)" -->
                                 </div>
                             </div>

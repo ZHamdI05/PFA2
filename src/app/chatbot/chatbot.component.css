@@ -225,6 +225,7 @@ text-area {
     padding: 1rem;
     /* overflow-y: scroll; */
     max-height: 500px;
+    width: 500px;
 }
 
 .chat-container li.chat-left,

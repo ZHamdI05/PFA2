@@ -22,6 +22,7 @@ export class ProjectFormComponent {
     industry:industry,
     sector:sector
     }
+    
     this._dataService.submitProject(project);
   }
 }

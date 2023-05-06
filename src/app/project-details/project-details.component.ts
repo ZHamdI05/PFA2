@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { DataService } from '../data.service';
 import { Subscription } from 'rxjs';
-import { IProject } from '../ProjectInterface';
+import { IProject } from '../interfaces/ProjectInterface';
 
 @Component({
   selector: 'app-project-details',

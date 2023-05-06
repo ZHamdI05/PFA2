@@ -1,5 +1,6 @@
 using Database.BL;
 using Database.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,21 +13,22 @@ namespace WebAPI.Controllers
     public class ProjectController : ControllerBase
     {
         private readonly WebAPIDbContext _context;
+        private readonly IConfiguration _config;
 
-        public ProjectController(WebAPIDbContext context) 
+        public ProjectController(WebAPIDbContext context, IConfiguration config) 
         {
              _context= context;
-             ExportCSV.Export("Projects","projects.csv");
-             ExportCSV.Export("Ratings","ratings.csv");
-        }
+      _config=config;
 
-        [HttpGet] // Get all projects 
+        }
+    [Authorize(Roles = "User")]
+    [HttpGet] // Get all projects 
         public async Task<ActionResult<IEnumerable<Project>>> GetProjects()
         {
             return await _context.Projects.ToListAsync();
         }
-
-        [HttpGet("{id}")] // Get project by Id
+    [Authorize]
+    [HttpGet("{id}")] // Get project by Id
         public async Task<IActionResult> GetProjects(int id)
         {
             
@@ -37,16 +39,16 @@ namespace WebAPI.Controllers
 
             return NotFound();
         }
-
-        [HttpPost] // Add new project 
+    //Authorize]
+    [HttpPost] // Add new project 
         public async Task<IActionResult> AddProjects(Project project)
         {
             await _context.Projects.AddAsync(project);
             await _context.SaveChangesAsync();
             return Ok(project);
         }
-
-        [HttpDelete("{id}")]// delete¨Project
+    [Authorize]
+    [HttpDelete("{id}")]// delete¨Project
         public async Task<IActionResult> DeleteProject(int id)
         {
             var project = await _context.Projects.FindAsync(id);
@@ -60,8 +62,8 @@ namespace WebAPI.Controllers
 
             return NoContent();
         }
-
-        [HttpPut] // Update project
+    [Authorize]
+    [HttpPut] // Update project
         public async Task<IActionResult> UpdateProject(Project project)
         {
             var existingProject = await _context.Projects.FindAsync(project.ProjectId);

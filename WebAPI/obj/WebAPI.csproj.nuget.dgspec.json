@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj",
         "projectName": "Database.BL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,17 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "CsvHelper": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[30.0.1, )"
-            },
-            "IronPython": {
-              "target": "Package",
-              "version": "[3.4.0, )"
-            },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.1, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -62,25 +54,21 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.Saml": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.1, )"
             },
-            "OpenAI": {
-              "target": "Package",
-              "version": "[1.7.2, )"
-            },
-            "Python.Included": {
-              "target": "Package",
-              "version": "[3.11.2, )"
-            },
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "python": {
-              "target": "Package",
-              "version": "[3.11.3, )"
             }
           },
           "imports": [
@@ -103,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "projectName": "Database.DAL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -127,8 +115,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.BL\\Database.BL.csproj"
+              "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.BL\\Database.BL.csproj"
               }
             }
           }
@@ -143,17 +131,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "CsvHelper": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[30.0.1, )"
-            },
-            "IronPython": {
-              "target": "Package",
-              "version": "[3.4.0, )"
-            },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.1, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -175,25 +155,21 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.Saml": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.1, )"
             },
-            "OpenAI": {
-              "target": "Package",
-              "version": "[1.7.2, )"
-            },
-            "Python.Included": {
-              "target": "Package",
-              "version": "[3.11.2, )"
-            },
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "python": {
-              "target": "Package",
-              "version": "[3.11.3, )"
             }
           },
           "imports": [
@@ -216,14 +192,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\PFA2\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -240,8 +216,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\here\\PFA2\\Database.DAL\\Database.DAL.csproj"
+              "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\PFA2\\Database.DAL\\Database.DAL.csproj"
               }
             }
           }
@@ -256,29 +232,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-<<<<<<< HEAD
-            "CsvHelper": {
-              "target": "Package",
-              "version": "[30.0.1, )"
-            },
-            "IronPython": {
-              "target": "Package",
-              "version": "[3.4.0, )"
-            },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[6.0.14, )"
-            },
-=======
->>>>>>> 1e63a3eadc681e9ef293e9ef6a1da64d123e2405
-            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
-              "target": "Package",
-              "version": "[6.0.12, )"
-            },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.1, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -293,17 +246,17 @@
               "target": "Package",
               "version": "[2.9.0, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.Saml": {
+              "target": "Package",
+              "version": "[6.29.0, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[2.0.1, )"
-            },
-            "OpenAI": {
-              "target": "Package",
-              "version": "[1.7.2, )"
-            },
-            "Python.Included": {
-              "target": "Package",
-              "version": "[3.11.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -312,10 +265,6 @@
             "System.Diagnostics.Tools": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "python": {
-              "target": "Package",
-              "version": "[3.11.3, )"
             }
           },
           "imports": [

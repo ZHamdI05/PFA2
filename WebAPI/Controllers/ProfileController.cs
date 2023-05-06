@@ -1,5 +1,6 @@
 using Database.BL;
 using Database.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,8 +18,8 @@ namespace WebAPI.Controllers
         {
             _context = context;
         }
-
-         [HttpGet("{id}")] // Get project by Id
+    [Authorize]
+    [HttpGet("{id}")] // Get project by Id
         public async Task<IActionResult> GetProjects(int id)
         {
             
@@ -29,9 +30,9 @@ namespace WebAPI.Controllers
 
             return NotFound();
         }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ApplicationUser>> GetUser(int id)
+    [Authorize]
+    [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
         {
             var applicationUser = await _context.Users.FindAsync(id);
 
@@ -42,18 +43,18 @@ namespace WebAPI.Controllers
 
             return applicationUser;
         }
-
-        [HttpPost]
-        public async Task<ActionResult<ApplicationUser>> AddUser(ApplicationUser applicationUser)
+    [Authorize]
+    [HttpPost]
+        public async Task<ActionResult<User>> AddUser(User applicationUser)
         {
             _context.Users.Add(applicationUser);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetUser), new { id = applicationUser.ID }, applicationUser);
         }
-
-        [HttpPut]
-        public async Task<IActionResult> UpdateUser(ApplicationUser applicationUser)
+    [Authorize]
+    [HttpPut]
+        public async Task<IActionResult> UpdateUser(User applicationUser)
         {
 
            
@@ -68,7 +69,8 @@ namespace WebAPI.Controllers
                 await _context.SaveChangesAsync();
                 return Ok(existingUser);
         }
-        [HttpDelete("{id}")]
+    [Authorize]
+    [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var applicationUser = await _context.Users.FindAsync(id);

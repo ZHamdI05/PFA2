@@ -22,48 +22,6 @@ namespace Database.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Database.BL.ApplicationUser", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
-
-                    b.Property<string>("Biography")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("BirthDay")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ContactID")
-                        .HasColumnType("int");
-
-                    b.Property<byte[]>("CvFileData")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("ProfilePicture")
-                        .HasColumnType("varbinary(max)");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("ContactID");
-
-                    b.ToTable("Users");
-                });
-
             modelBuilder.Entity("Database.BL.Contact", b =>
                 {
                     b.Property<int>("ContactID")
@@ -97,6 +55,9 @@ namespace Database.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ContactID");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Contacts");
                 });
@@ -316,13 +277,57 @@ namespace Database.DAL.Migrations
                     b.ToTable("Webinars");
                 });
 
-            modelBuilder.Entity("Database.BL.ApplicationUser", b =>
+            modelBuilder.Entity("Database.BL.User", b =>
                 {
-                    b.HasOne("Database.BL.Contact", "Contact")
-                        .WithMany()
-                        .HasForeignKey("ContactID");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("Contact");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("Biography")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("BirthDay")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("CvFileData")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("ProfilePicture")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Database.BL.Contact", b =>
+                {
+                    b.HasOne("Database.BL.User", null)
+                        .WithOne("Contact")
+                        .HasForeignKey("Database.BL.Contact", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Database.BL.Rating", b =>
@@ -333,7 +338,7 @@ namespace Database.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Database.BL.ApplicationUser", "User")
+                    b.HasOne("Database.BL.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -342,6 +347,11 @@ namespace Database.DAL.Migrations
                     b.Navigation("Project");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Database.BL.User", b =>
+                {
+                    b.Navigation("Contact");
                 });
 #pragma warning restore 612, 618
         }

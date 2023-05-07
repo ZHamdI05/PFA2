@@ -12,10 +12,18 @@ export class PostComponent {
   ngOnInit(){
     
   }
+  public liked:boolean=false;
   like(){
-    //do something
+    this.liked=!this.liked;
+    if(this.liked){this.post.likes+=1}else{this.post.likes-=1}
+    // it shouldn't be like this
   }
-  comment(){
-    //do something
+  comment(content:string){
+    const newComment={
+      user:'Hamdi Zor',//should be extracted from session storage
+      dateCommentaire:new Date(),
+      content:content,
+    }; 
+    this.post.comments.push(newComment);
   }
 }

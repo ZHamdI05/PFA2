@@ -91,8 +91,9 @@
             <!-- middle wrapper start -->
             <div class="col-md-8 col-xl-6 middle-wrapper">
                 <div class="row">
-                    <div class="col-md-12 grid-margin">
-                        <div class="card rounded">
+                    <div *ngFor="let post of posts" class="col-md-12 grid-margin">
+                        <app-post [post]="post"></app-post></div>
+                        <!-- <div class="card rounded">
                             <div class="card-header">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
@@ -125,7 +126,7 @@
                             <div class="card-body">
                                 <p class="mb-3 tx-14">testing posts</p>
                                 <!-- <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""> -->
-                            </div>
+                            <!-- </div>
                             <div class="card-footer">
                                 <div class="d-flex post-actions">
                                     <a href="javascript:;" class="d-flex align-items-center text-muted mr-4">
@@ -150,8 +151,9 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
+                    <!-- a full post
                     <div class="col-md-12">
                         <div class="card rounded">
                             <div class="card-header">
@@ -230,7 +232,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- middle wrapper end -->

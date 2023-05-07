@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 })
 export class TimelineComponent {
   constructor(private dataService:DataService, private router:Router){}
+  public posts=[{
+    creatorName:'Hamdi wahed',
+    creationDate:new Date(),
+    content:'some content',
+    likes:100,
+    comments:[{},{},{}],
+    
+  }];
   ngOnInit(){
     let loginToken=this.dataService.getToken();
   }

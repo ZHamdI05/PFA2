@@ -56,9 +56,9 @@
                         <!-- Overview -->
                         <div id="overview" class="tab-pane" [ngClass]="overviewActive">
                             <form class="well" style="overflow: auto;">
-                                <textarea rows="2" class="form-control" placeholder="What's on your mind?"></textarea>
+                                <textarea #postContent rows="2" class="form-control" placeholder="What's on your mind?"></textarea>
                                 <div class="margin-top-10">
-                                    <button type="submit" class="btn btn-sm btn-primary pull-right">Post</button>
+                                    <button (click)="makeAPost(postContent.value)" type="submit" class="btn btn-sm btn-primary pull-right">Post</button>
                                 </div>
                             </form>
     

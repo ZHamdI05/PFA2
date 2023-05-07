@@ -250,6 +250,7 @@ body{margin-top:20px;}
 .chat-container li.chat-right > .chat-avatar {
     margin-left: 20px;
     margin-right: 0;
+    order: 3;
 }
 
 .chat-container li .chat-name {
@@ -282,6 +283,7 @@ body{margin-top:20px;}
 
 .chat-container li.chat-right > .chat-text {
     text-align: right;
+    order:2;
 }
 
 .chat-container li.chat-right > .chat-text:before {
@@ -308,6 +310,7 @@ body{margin-top:20px;}
 
 .chat-container li.chat-right > .chat-hour {
     margin: 0 15px 0 0;
+    order:1;
 }
 
 @media (max-width: 767px) {

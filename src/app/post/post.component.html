@@ -19,7 +19,7 @@
         <div class="card mb-8">
           <div class="card-body">
             <div class="media mb-6">
-              <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="d-block ui-w-40 rounded-circle"
+              <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="d-block ui-w-40 rounded-circle"
                 alt="">
               <div class="media-body ml-3">
                 {{post.creatorName}}
@@ -35,21 +35,22 @@
             <a (click)="like()" class="d-inline-block text-muted">
               <strong>{{post.likes}}</strong> <small class="align-middle"> Likes</small>
             </a>
-            <a (click)="comment()" class="d-inline-block text-muted ml-3">
+            <a class="d-inline-block text-muted ml-3">
               <strong>{{post.comments.length}}</strong> <small class="align-middle"> Comments</small>
             </a>
             <hr style="border-bottom:1px gray solid ;">
-            <li class="comment">
+            <!-- check this shit -->
+            <li class="comment" *ngFor="let comment of post.comments">
               <!-- avatar -->
               <img class="avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png" width="50" height="50" alt="avatar">
               <!-- comment body -->
-              <div class="comment-body"> 
+              <div class="comment-body" > 
                   <a href="#" class="comment-author">
-                      <small class="text-muted pull-right"> 12 Minutes ago </small>
-                      <span>Hamdi Zor</span>
+                      <small class="text-muted pull-right">{{comment.dateCommentaire|date:'short'}}</small>
+                      <span>{{comment.user}}</span>
                   </a>
                   <p>
-                      Today will be a good day
+                      {{comment.content}}
                   </p>
               </div><!-- /comment body -->
 
@@ -76,9 +77,9 @@
         </div>
       </div>
       <div class="input-group">
-        <input id="btn-input" type="text" class="form-control" placeholder="Type your comment...">
+        <input #commentContent id="btn-input" type="text" class="form-control" placeholder="Type your comment...">
         <span class="input-group-btn">
-            <button class="btn btn-primary" id="btn-chat">
+            <button (click)="comment(commentContent.value)" class="btn btn-primary" id="btn-chat">
                 <i class="fa fa-reply"></i> Comment
             </button> 
         </span>

@@ -52,17 +52,22 @@ export class ProfileComponent {
     
   }
   public posts=[{
-    creatorName:'Hamdi wahed',
+    creatorName:'Hamdi Zor',//should be user.firstname + ' ' + user.lastName
     creationDate:new Date(),
     content:'some content',
     likes:100,
-    comments:[{},{},{}],
+    comments:[],
     
   }];
   public makeAPost(content:string){
     const post={
-      
+      creatorName:'Hamdi Zor',//should be user.firstname + ' ' + user.lastName
+      creationDate:new Date(),
+      content:content,
+      likes:0,
+      comments:[],
     }
+    this.posts.push(post);
 
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class PostComponent {
   ngOnInit(){
     
   }
+  @ViewChild('commentContent') commentContent!:ElementRef;
   public liked:boolean=false;
   like(){
     this.liked=!this.liked;
@@ -25,5 +26,6 @@ export class PostComponent {
       content:content,
     }; 
     this.post.comments.push(newComment);
+    this.commentContent.nativeElement.value='';
   }
 }

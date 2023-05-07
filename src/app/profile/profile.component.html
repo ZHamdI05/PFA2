@@ -27,10 +27,10 @@
                         
                         <!-- About -->
                         <h3 class="text-black">
-                            Hamdi Zor 
+                            {{activeUser.firstName}} {{activeUser.lastName}} 
                             <small class="text-gray size-14"> / CEO</small>
                         </h3>
-                        <p class="size-12">this is my bio.</p>
+                        <p class="size-12">{{activeUser.bio}}</p>
                         <!-- /About -->
     
                         
@@ -65,7 +65,7 @@
                             <hr class="invisible half-margins">
                             <!-- COMMENT -->
                             <ul class="comment list-unstyled padding-0">
-                                <li *ngFor="let post of posts" >
+                                <li *ngFor="let post of posts.reverse()" >
                                     <app-post [post]="post"></app-post>
                                 </li>
                             </ul>
@@ -82,13 +82,13 @@
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileFirstName">First Name</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="profileFirstName">
+                                            <input #firstName value="{{activeUser.firstName}}" type="text" class="form-control" id="profileFirstName">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileLastName">Last Name</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="profileLastName">
+                                            <input #lastName value="{{activeUser.lastName}}" type="text" class="form-control" id="profileLastName">
                                         </div>
                                     </div>
                                     <!-- <div class="form-group">
@@ -112,7 +112,7 @@
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
                                         <div class="col-md-8">
-                                            <textarea #bio class="form-control" rows="3" id="profileBio"></textarea>
+                                            <textarea #bio class="form-control" rows="3" id="profileBio">{{activeUser.bio}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -123,10 +123,10 @@
                                                     <div class="button">
                                                         <input #pfp type="file" id="file" (change)="changePfp($event)" onchange="this.parentNode.nextSibling.value = this.value">
                                                     </div>
-                                                    <input type="text" readonly=""><br>
-                                                    <img src="{{url}}" alt="fail" style="max-width: 50%;">
+                                                    <!-- <input type="text" readonly=""><br> -->
+                                                    <!-- <img src="{{url}}" alt="fail" style="max-width: 50%;"> -->
                                                 </label>
-                                                <a (click)="removeImage(pfp)" class="btn btn-danger btn-xs nomargin"><i class="fa fa-times"></i> Remove Current Image</a>
+                                                <!-- <a (click)="removeImage(pfp)" class="btn btn-danger btn-xs nomargin"><i class="fa fa-times"></i> Remove Current Image</a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -137,31 +137,35 @@
                                 <hr>
     
                                 <h4>Change Password</h4>
-                                <fieldset class="mb-xl">
+                                <fieldset  class="mb-xl"><!-- #myForm="ngForm" -->
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileNewPassword">Old Password</label>
                                         <div class="col-md-8">
-                                            <input type="password" class="form-control" id="profileOldPassword">
+                                            <input #oldPassword type="password" class="form-control" id="profileOldPassword">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileNewPassword">New Password</label>
                                         <div class="col-md-8">
-                                            <input type="password" class="form-control" id="profileNewPassword">
+                                            <input (ngModelChange)="checkPasswords()" [(ngModel)]="password1"  #newPassword type="password" class="form-control" name="password1" id="profileNewPassword">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repeat New Password</label>
                                         <div class="col-md-8">
-                                            <input type="password" class="form-control" id="profileNewPasswordRepeat">
+                                            <input [(ngModel)]="password2" #newPasswordConfirm (ngModelChange)="checkPasswords()" name="password2" type="password" class="form-control" id="profileNewPasswordRepeat">
                                         </div>
                                     </div>
+                                    <!-- <div *ngIf="myForm.submitted && myForm.controls['password2'].value !== myForm.controls['password1'].value">
+                                        Passwords do not match
+                                      </div> -->
+                                      
                                 </fieldset>
-    
+                                <div>{{passwordsMatch}}</div>
                                 <div class="row">
                                     <div class="col-md-9 col-md-offset-3">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default">Reset</button>
+                                        <button type="submit" (click)="updateUserData(firstName.value,lastName.value,bio.value,oldPassword.value,newPassword.value,newPasswordConfirm.value)" class="btn btn-primary">Submit</button>
+                                        <button (click)="reset()" class="btn btn-default">Reset</button>
                                     </div>
                                 </div>
     

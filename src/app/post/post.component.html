@@ -35,9 +35,9 @@
             <a (click)="like()" class="d-inline-block text-muted">
               <strong>{{post.likes}}</strong> <small class="align-middle"> Likes</small>
             </a>
-            <a class="d-inline-block text-muted ml-3">
+            <span class="d-inline-block text-muted ml-3">
               <strong>{{post.comments.length}}</strong> <small class="align-middle"> Comments</small>
-            </a>
+            </span>
             <hr style="border-bottom:1px gray solid ;">
             <!-- check this shit -->
             <li class="comment" *ngFor="let comment of post.comments">

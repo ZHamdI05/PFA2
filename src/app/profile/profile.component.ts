@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Buffer } from 'buffer';
 @Component({
   selector: 'app-profile',
@@ -8,7 +8,18 @@ import { Buffer } from 'buffer';
 export class ProfileComponent {
   public editActive={"active":false}
   public overviewActive={"active":true}
-  
+  public activeUser!: {
+    firstName: string;
+    lastName: string;
+    bio: string;
+  };
+  ngOnInit(){
+    this.activeUser={
+        firstName:'Hamdi',
+        lastName:'Zor',
+        bio:'Something as a bio'
+    }
+  }
   constructor(){}
   goOverview(){
     this.overviewActive.active=true;
@@ -59,15 +70,53 @@ export class ProfileComponent {
     comments:[],
     
   }];
+  @ViewChild('postContent') postContent!: ElementRef;
+  @ViewChild('firstName') firstName!: ElementRef;
+  @ViewChild('lastName') lastName!: ElementRef;
+  @ViewChild('bio') bio!: ElementRef;
+  @ViewChild('oldPassword') oldPassword!: ElementRef;
+  @ViewChild('newPassword') newPassword!: ElementRef;
+  @ViewChild('newPasswordConfirm') newPasswordConfirm!: ElementRef;
+
   public makeAPost(content:string){
     const post={
-      creatorName:'Hamdi Zor',//should be user.firstname + ' ' + user.lastName
+      creatorName:this.activeUser.firstName+' '+this.activeUser.lastName,//should be user.firstname + ' ' + user.lastName
       creationDate:new Date(),
       content:content,
       likes:0,
       comments:[],
     }
     this.posts.push(post);
-
+    this.postContent.nativeElement.value='';
+  }
+  password1: string='';
+  password2: string='';
+  passwordsMatch='';
+  checkPasswords() {
+    if(this.password1===''||this.password2===''){
+      this.passwordsMatch='';
+    }else{
+      if (this.password1 === this.password2) {
+        this.passwordsMatch='';
+      } else {
+        this.passwordsMatch="Passwords don't match";
+      }
+    }
+  }
+  reset(){
+    this.firstName.nativeElement.value=this.activeUser.firstName;
+    this.lastName.nativeElement.value=this.activeUser.lastName;
+    this.bio.nativeElement.value=this.activeUser.bio;
+    this.oldPassword.nativeElement.value='';
+    this.newPassword.nativeElement.value='';
+    this.newPasswordConfirm.nativeElement.value='';
+  }
+  updateUserData(firstName:string,lastName:string,bio:string,oldpassword:string,newPassword:string,newPasswordConfirm:string){
+    this.activeUser.firstName=firstName;
+    this.activeUser.lastName=lastName;
+    this.activeUser.bio=bio;
+    if(oldpassword){
+      // check password authenticity and do something
+    }
   }
 }

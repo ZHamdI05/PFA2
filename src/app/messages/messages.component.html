@@ -55,7 +55,7 @@
                                 <span #toUser>To: <span class="name">Hamdi Zor</span></span>
                             </div>
                             <div class="chat-container" style="max-height:700px; overflow-y: scroll;" >
-                                <ul [scrollTop]="scrollMe.scrollHeight" class="chat-box chatContainerScroll">
+                                <ul #scrollMe [scrollTop]="scrollMe.scrollHeight" class="chat-box chatContainerScroll">
                                     <!-- <li class="chat-left">
                                         <div class="chat-avatar">
                                             <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">

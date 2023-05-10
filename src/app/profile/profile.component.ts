@@ -22,9 +22,10 @@ export class ProfileComponent {
       lastName:this.dataService.getUserData().lastName!,
       bio:'No bio is set'
   }
-    if(!this.activeUser){
+    if(!this.activeUser.firstName){
       this.router.navigate(['login']);
     }
+
     
   }
   

@@ -12,7 +12,7 @@ export class ProjectFormComponent {
 
   }
   ngOnInit(){
-    if(this._dataService.getUserData()){ this.router.navigate(['login']);}
+    if(!this._dataService.getUserData().firstName){ this.router.navigate(['login']);}
 
   }
   submitProject(name:string,budget:string,industry:string,sector:string,description:string,region:string){
@@ -29,5 +29,8 @@ export class ProjectFormComponent {
     }
     
     this._dataService.submitProject(project);
+    this._dataService.setTempProject(name,budget,industry,sector,description,region);
+    this.router.navigate(['projects/form']);
   }
+  
 }

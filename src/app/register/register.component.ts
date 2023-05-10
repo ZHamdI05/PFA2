@@ -18,15 +18,15 @@ export class RegisterComponent {
       email:email,
       password:pass
     }
-    this.dataService.register(userData).subscribe(res=> {
-      if(res.status===200){
-        alert('Account created');
-
-
-
-      }
-      else{}
-    });
+    // remove this next line and uncomment the ones after
+    this.dataService.setUserData(first,last,email,pass);
+    alert('registration complete');
+    // this.dataService.register(userData).subscribe(res=> {
+    //   if(res.status===200){
+    //     alert('Account created');
+    //   }
+    //   else{}
+    // });
     // do something with validate
   }
 

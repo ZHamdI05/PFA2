@@ -39,6 +39,7 @@ export class ProjectsComponent {
       console.log(res);
       console.log(this.projects);
     });
+    if(this._dataService.getTempProject()){this.projects.push(this._dataService.getTempProject());}
   }
   search(prompt:string){
     this._dataService.searchProject(prompt).subscribe((p:any) => this.projects=p);

@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-messages',
@@ -20,11 +21,11 @@ export class MessagesComponent {
       }
       
   }[]=[];
-  constructor(private _dataService:DataService){
-
-  }
+  constructor(private _dataService:DataService,private router:Router){}
   public activeUser:any;
   ngOnInit(){
+    if(!this._dataService.getUserData()){ this.router.navigate(['login']);}
+
     this.users=[
       {
         id:1,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-form',
@@ -7,7 +8,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./project-form.component.css']
 })
 export class ProjectFormComponent {
-  constructor(private _dataService:DataService){
+  constructor(private _dataService:DataService, private router:Router){
+
+  }
+  ngOnInit(){
+    if(this._dataService.getUserData()){ this.router.navigate(['login']);}
 
   }
   submitProject(name:string,budget:string,industry:string,sector:string,description:string,region:string){

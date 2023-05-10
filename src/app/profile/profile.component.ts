@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Buffer } from 'buffer';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -13,14 +15,19 @@ export class ProfileComponent {
     lastName: string;
     bio: string;
   };
+  constructor(private dataService:DataService,private router:Router){}
   ngOnInit(){
     this.activeUser={
-        firstName:'Hamdi',
-        lastName:'Zor',
-        bio:'Something as a bio'
-    }
+      firstName:this.dataService.getUserData().firstName!,
+      lastName:this.dataService.getUserData().lastName!,
+      bio:'No bio is set'
   }
-  constructor(){}
+    if(!this.activeUser){
+      this.router.navigate(['login']);
+    }
+    
+  }
+  
   goOverview(){
     this.overviewActive.active=true;
     this.editActive.active=false;
@@ -62,14 +69,16 @@ export class ProfileComponent {
     reader.readAsArrayBuffer(file);
     
   }
-  public posts=[{
-    creatorName:'Hamdi Zor',//should be user.firstname + ' ' + user.lastName
-    creationDate:new Date(),
-    content:'some content',
-    likes:100,
-    comments:[],
+  public posts:any=[
+    // {
+    // creatorName:this.activeUser.firstName+' '+this.activeUser.lastName,//should be user.firstname + ' ' + user.lastName
+    // creationDate:new Date(),
+    // content:'some content',
+    // likes:100,
+    // comments:[],
     
-  }];
+  // }
+];
   @ViewChild('postContent') postContent!: ElementRef;
   @ViewChild('firstName') firstName!: ElementRef;
   @ViewChild('lastName') lastName!: ElementRef;
@@ -115,6 +124,7 @@ export class ProfileComponent {
     this.activeUser.firstName=firstName;
     this.activeUser.lastName=lastName;
     this.activeUser.bio=bio;
+    this.dataService.setUserData(this.activeUser.firstName,this.activeUser.lastName,this.dataService.getUserData().email!,this.dataService.getUserData().password!);
     if(oldpassword){
       // check password authenticity and do something
     }

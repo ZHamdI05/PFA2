@@ -90,4 +90,55 @@ export class DataService {
   public getAllProjects(){
     return this.http.get<IProject[]>(this.projectUrl,this.httpOptions);
   }
+  public setUserData(first:string,last:string,email:string,pass:string){
+    sessionStorage.setItem('email',email);
+    sessionStorage.setItem('first',first);
+    sessionStorage.setItem('last',last);
+    sessionStorage.setItem('pass',pass);
+  }
+  public getUserData(){
+    return{
+      firstName:sessionStorage.getItem('first'),
+      lastName:sessionStorage.getItem('last'),
+      email:sessionStorage.getItem('email'),
+      password:sessionStorage.getItem('pass')
+    }
+  }
+  public setTempProject(name:string,budget:string,industry:string,sector:string,description:string,region:string){
+    sessionStorage.setItem('projectExists','true');
+    sessionStorage.setItem('projectId', (Math.floor(Math.random() * 100) + 1).toString());
+    // projectId:number,
+    sessionStorage.setItem('projectName',name);
+    //projectName:name,
+    sessionStorage.setItem('projectDescription',description);
+    //description:description,
+    sessionStorage.setItem('projectStatus','in progress');
+    //status:'in progress',
+    sessionStorage.setItem('projectDate',(new Date()).toString());
+    //createdOn:new Date(),
+    sessionStorage.setItem('projectBudget',budget);
+    //budget:parseInt(budget),
+    sessionStorage.setItem('projectRegion',region);
+    //region:region,
+    sessionStorage.setItem('projectIndustry',industry);
+    //industry:industry,
+    sessionStorage.setItem('projectSector',sector);
+    //sector:sector
+  }
+  public getTempProject():any|null{
+    if(sessionStorage.getItem('projectExists')=='true'){
+    return {
+      projectId:sessionStorage.getItem('projectId'),
+      projectName:sessionStorage.getItem('projectName'),
+      description:sessionStorage.getItem('projectDescription'),
+      status:sessionStorage.getItem('projectStatus'),
+      createdOn:sessionStorage.getItem('projectDate'),
+      budget:parseInt(sessionStorage.getItem('projectBudget')!),
+      region:sessionStorage.getItem('projectRegion'),
+      industry:sessionStorage.getItem('projectIndustry'),
+      sector:sessionStorage.getItem('projectSector')
+    }}else{
+      return null;
+    }
+  }
 }

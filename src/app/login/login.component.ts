@@ -33,7 +33,13 @@ export class LoginComponent {
       email:email,
       password:pass
     }
-    
+    let userData=this.dataService.getUserData();
+    if(userData.email===email&&userData.password===pass){
+      alert('login successful');
+      this.router.navigate(['profile']);
+    }else{
+      alert('wrong email or password');
+    }
     this.dataService.login(loginData).subscribe(rep => {
       if(rep.access_token==undefined){
         alert('wrong email or password');

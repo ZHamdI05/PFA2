@@ -9,8 +9,9 @@ import { DataService } from '../data.service';
 export class PostComponent {
   @Input() public post:any;
   constructor(private dataService:DataService){}
+  public user:any;
   ngOnInit(){
-    
+    this.user=this.dataService.getUserData();
   }
   @ViewChild('commentContent') commentContent!:ElementRef;
   public liked:boolean=false;
@@ -21,7 +22,7 @@ export class PostComponent {
   }
   comment(content:string){
     const newComment={
-      user:'Hamdi Zor',//should be extracted from session storage
+      user:this.user.firstName+' '+this.user.lastName,//should be extracted from session storage
       dateCommentaire:new Date(),
       content:content,
     }; 

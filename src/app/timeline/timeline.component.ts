@@ -18,6 +18,8 @@ export class TimelineComponent {
     
   }];
   ngOnInit(){
+    this.router.navigate(['login']);
+
     let loginToken=this.dataService.getToken();
   }
 
